@@ -111,11 +111,6 @@ A containerization platform that enables developers to package applications and 
 Tool for defining and running multi-container Docker applications using a simple YAML configuration.
 **Purpose**: Orchestrates multiple services like Django, PostgreSQL, MySQL, and Redis with a single command.
 
-### 🔄 Celery
-
-An asynchronous task queue used to run background jobs, enabling non-blocking operations like sending emails or processing payments.
-**Purpose**: Automates recurring tasks like clearing expired sessions, sending reminders, or handling scheduled operations.
-
 ### 🔬 Pytest
 
 A lightweight and powerful testing framework for writing simple and scalable tests in Python applications. 
