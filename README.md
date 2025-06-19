@@ -18,3 +18,29 @@ This is a backend service that powers an Airbnb Clone Platform, providing a scal
 - Redis
 - Docker
 - CI/CD Pipelines
+
+## 👥 Team Roles
+#### These are the roles for each team and their responsibility as outlined below
+
+## 🧠 Backend Developer
+
+### Responsiblities
+-  Responsible for implementing API endpoints, database schemas, and business logic.
+-  Collaborate with the frontend team towards intergrating api
+-  devise an app architecture or design and implement the necessary integrations.
+
+## 📁 Database Administrator
+
+### Responsiblities
+-  Manages database design, indexing, and optimizations.
+- Collaborates with developers and system architects to design the MySQL database schema.
+-  Enforces security policies for protecting sensitive data.
+-  Manages the entire database operations, backup, and cleanup.
+
+## ⚙️ DevOps Engineer
+
+### Responsiblities
+-  Handles deployment, monitoring, and scaling of the backend services.
+- Facilitates cooperation between development and operations teams
+-  Builds and maintains CI/CD pipelines to automate code integration, testing, and deployment for faster and more reliable software delivery.
+-  Monitors system performance and reliability using observability tools like Prometheus, Grafana, or Datadog to detect and resolve issues proactively.
