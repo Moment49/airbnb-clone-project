@@ -20,7 +20,7 @@ This is a backend service that powers an Airbnb Clone Platform, providing a scal
 - CI/CD Pipelines
 
 ## 👥 Team Roles
-#### These are the roles for each team and their responsibility as outlined below
+### Each role plays a crucial part in delivering a secure, scalable, and user-friendly Airbnb Clone platform. Below is a breakdown of the key team roles and their core responsibilities within the project:
 
 ## 🧠 Backend Developer
 
@@ -44,3 +44,26 @@ This is a backend service that powers an Airbnb Clone Platform, providing a scal
 - Facilitates cooperation between development and operations teams
 -  Builds and maintains CI/CD pipelines to automate code integration, testing, and deployment for faster and more reliable software delivery.
 -  Monitors system performance and reliability using observability tools like Prometheus, Grafana, or Datadog to detect and resolve issues proactively.
+
+##  🧪 QA Engineer
+
+### Responsiblities
+-  Makes sure an application performs according to requirements
+-  Ensures the backend functionalities are thoroughly tested and meet quality standards.
+-  Identifies functional and non-functional defects to ensure the application behaves as expected and meets performance, usability, and security standards.
+-  Collaborates with developers and product teams to clarify requirements and report bugs or inconsistencies.
+
+
+##  👨 Product owner (PO)
+
+### Responsiblities
+-  Defines and owns the product vision, ensuring it aligns with business goals and delivers value to customers.
+-  Manages the product backlog, prioritizing features, enhancements, and bug fixes based on business value and customer needs.
+-  Ensures the final product meets customer and stakeholder requirements by collaborating closely with development, design, and QA teams.
+
+##  👨 Product Manager (PM)
+
+### Responsiblities
+-  Plans, organizes, and monitors project timelines, resources, and deliverables throughout the development lifecycle.
+-  Manages and motivates the software development team, fostering collaboration, resolving conflicts, and maintaining productivity.
+-  Maintains project documentation, including schedules, status reports, and post-project reviews.
