@@ -1,5 +1,5 @@
 # 🚀 Project Overview
-This is a backend service that powers an Airbnb Clone Platform, providing a scalable, robust system for managing users, property listings, bookings, payments, and reviews. It is designed to support secure user management, efficient property and booking operations, payment processing, and data optimization.
+This is a backend service that powers an Airbnb Clone Platform, providing a scalable, robust system for managing users, property listings, bookings, payments, and reviews. It is designed to ensure secure user management, streamline property and booking operations, handle payment processing, and support efficient data management and optimization.
 
 ## 🏆 Project Goals
 - User Management: Secure user registration and authentication
