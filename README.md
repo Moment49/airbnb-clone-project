@@ -268,9 +268,7 @@ The RESTful APIs are described using the OpenAPI standard and made accessible th
 Caching with Redis and strategic database indexing are used to enhance API response times and minimize server load. Background processing with Celery ensures that intensive tasks are handled asynchronously, keeping user interactions fast
 
 
-
-
-### 🚀 API Security
+## 🚀 API Security
 
 Security is a critical component of the Airbnb Clone Backend, ensuring the integrity, confidentiality, and availability of user data and services. The following security measures are implemented to protect the application and its users.
 
