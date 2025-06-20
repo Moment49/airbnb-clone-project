@@ -226,3 +226,7 @@ The database schema is thoughtfully designed to handle the main features of the 
 - `Properties` ──▶ `Bookings`: A property can have many bookings.
 - `Properties` ──▶ `Reviews`: A property can have many reviews.
 - `Bookings` ──▶ `Payments`: Each booking can have one payment.
+
+## ✨ Feature Breakdown
+
+This section outlines the core features implemented in the Airbnb Clone Backend and how each contributes to delivering a functional and user-centric platform.
