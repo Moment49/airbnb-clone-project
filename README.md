@@ -126,3 +126,103 @@ Tool for testing, documenting, and monitoring APIs in development.
 
 Automated workflows that streamline the process of building, testing, and deploying code with speed and reliability. 
 **Purpose**: Ensures code changes are validated and deployed efficiently and reliably.
+
+##  🗂️ Database Design
+The database schema is thoughtfully designed to handle the main features of the Airbnb Clone application — such as user accounts, property listings, bookings, payments, and reviews. It outlines the core entities, their key attributes, and the relationships that connect them.
+### 👤 Users
+### Represents both regular user and hosts
+
+#### Key Fields
+- `id` - Identifies an entry of a user or guest
+- `first name` - First name of user
+- `last name` - Last name or surname of the user
+- `email` - email address of the user must be unique
+- `password` - this is the hashed password for user
+- `password`: Hashed password for authentication.
+- `is_hosts`: Boolean indicating if the user can list properties.
+**Relationships**:
+- A **user** can create multiple **properties**.
+- A **user** can place multiple **bookings**.
+- A **user** can leave multiple **reviews**.
+
+### 👤 Properties
+### Represents the property listings provided by the property_vendors
+
+#### Key Fields
+- `id` - Identifies a property listing
+- `property name` - Property listing name
+- `Size` -This is the size or the property possibly in (acres)
+- `description` - Short description of the property
+- `location` - Address or location of the property (city, country)
+- `password`- Hashed password for authentication.
+- `is_hosts` - Boolean indicating if the user can list properties
+- `owner_id` - This is a foreign key to users table
+
+**Relationships**:
+- A **property** is owned by one **user** (host or vendor).
+- A **property** can have multiple **bookings**.
+- A **property** can have multiple **reviews**.
+
+### 📅 Bookings
+### Represents reservations made by users for properties
+
+#### Key Fields
+- `id` - Unique identifier for each booking
+- `user_id` - Foreign key referencing the user who made the booking
+- `property_id` - Foreign key referencing the booked property
+- `start_date` - Date when the booking starts
+- `end_date` - Date when the booking ends
+- `status` - Status of the booking (e.g., pending, confirmed, cancelled)
+- `total_payment` - Total amount paid for the booking
+- `created_at` - Timestamp when the booking was created
+- `updated_at` - Timestamp when the booking was last updated
+
+**Relationships**:
+- A **booking** is made by one **user**
+- A **booking** is for one **property**
+- A **booking** can have one **payment** record
+
+### 💳 Payments
+### Represents payment transactions for bookings
+
+#### Key Fields
+- `id` - Unique identifier for each payment
+- `booking_id` - Foreign key referencing the associated booking
+- `user_id` - Foreign key referencing the user who made the payment
+- `amount` - Amount paid in the transaction
+- `payment_method` - Method used for payment (e.g., credit card, PayPal)
+- `payment_status` - Status of the payment (e.g., pending, completed, failed)
+- `transaction_id` - Unique identifier from the payment gateway
+- `paid_at` - Timestamp when the payment was completed
+- `created_at` - Timestamp when the payment record was created
+- `updated_at` - Timestamp when the payment record was last updated
+
+**Relationships**:
+- A **payment** is linked to one **booking**
+- A **payment** is made
+
+### 📝 Reviews
+### Represents user feedback and ratings for properties
+
+#### Key Fields
+- `id` - Unique identifier for each review
+- `user_id` - Foreign key referencing the user who wrote the review
+- `property_id` - Foreign key referencing the reviewed property
+- `booking_id` - Foreign key referencing the related booking (optional, if reviews are tied to bookings)
+- `rating` - Numeric rating given to the property (e.g., 1-5)
+- `comment` - Textual feedback provided by the user
+- `created_at` - Timestamp when the review was created
+- `updated_at` - Timestamp when the review was last updated
+
+**Relationships**:
+- A **review** belongs to one **user**
+- A **review** is for one **property**
+
+
+**Legend:**
+- `Users` ──▶ `Properties`: A user (host) owns many properties.
+- `Users` ──▶ `Bookings`: A user (guest) can make many bookings.
+- `Users` ──▶ `Reviews`: A user can leave many reviews.
+- `Properties` ──▶ `Bookings`: A property can have many bookings.
+- `Properties` ──▶ `Reviews`: A property can have many reviews.
+- `Bookings` ──▶ `Payments`: Each booking can have one payment.
