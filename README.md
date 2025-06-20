@@ -249,4 +249,14 @@ Handles secure payment transactions for bookings, supporting various payment met
 
 ### 📝 Review System
 
-Enables users to leave ratings and feedback for properties they have booked. This feature helps maintain quality and trust within the platform by allowing guests to share their experiences and hosts to
+Enables users to leave ratings and feedback for properties they have booked. This feature helps maintain quality and trust within the platform by allowing guests to share their experiences and hosts 
+
+### 📦 API Documentation
+
+The RESTful APIs are described using the OpenAPI standard and made accessible through tools like Swagger UI, enabling straightforward testing and integration. GraphQL support is also provided, allowing frontend developers to perform flexible and efficient data queries.
+
+---
+
+### 🚀 Performance Optimization
+
+Caching with Redis and strategic database indexing are used to enhance API response times and minimize server load. Background processing with Celery ensures that intensive tasks are handled asynchronously, keeping user interactions fast
