@@ -219,7 +219,7 @@ The database schema is thoughtfully designed to handle the main features of the 
 - A **review** is for one **property**
 
 
-**### 🔗 Entity Relationships Overview:**
+**🔗 Entity Relationships Overview:**
 - `Users` ──▶ `Properties`: A user (host) owns many properties.
 - `Users` ──▶ `Bookings`: A user (guest) can make many bookings.
 - `Users` ──▶ `Reviews`: A user can leave many reviews.
@@ -260,3 +260,64 @@ The RESTful APIs are described using the OpenAPI standard and made accessible th
 ### 🚀 Performance Optimization
 
 Caching with Redis and strategic database indexing are used to enhance API response times and minimize server load. Background processing with Celery ensures that intensive tasks are handled asynchronously, keeping user interactions fast
+
+
+### 🚀 API Security
+
+Security is a critical component of the Airbnb Clone Backend, ensuring the integrity, confidentiality, and availability of user data and services. The following security measures are implemented to protect the application and its users.
+
+---
+
+### 🔑 Authentication
+
+**Implementation**: Token-based authentication using JSON Web Tokens (JWT).  
+**Why It Matters**: Verifies the identity of users accessing the API, ensuring that only registered and logged-in users can perform sensitive operations such as bookings and payments.  
+**Crucial For**: Protecting user accounts and preventing unauthorized access to personal data and actions.
+
+---
+
+### 🛡️ Authorization
+
+**Implementation**: Role-based access control (RBAC) to restrict actions based on user roles (e.g., guest, host, admin).  
+**Why It Matters**: Ensures that users can only access resources and perform actions permitted for their role, such as only allowing hosts to manage property listings.  
+**Crucial For**: Preventing privilege escalation and protecting sensitive operations.
+
+---
+
+### 🚦 Rate Limiting
+
+**Implementation**: API rate limiting using Django REST Framework throttling and Redis.  
+**Why It Matters**: Limits the number of requests a user or IP can make in a given timeframe, protecting the API from abuse, brute-force attacks, and denial-of-service (DoS) attempts.  
+**Crucial For**: Maintaining service availability and preventing abuse.
+
+---
+
+### 🔒 Data Protection
+
+**Implementation**: All sensitive data (e.g., passwords, payment details) is encrypted in transit using HTTPS and stored securely (passwords are hashed using strong algorithms).  
+**Why It Matters**: Protects user data from interception and theft during transmission and storage.  
+**Crucial For**: Securing personal and financial information.
+
+---
+
+### 🧑‍💻 Input Validation & Sanitization
+
+**Implementation**: Strict validation and sanitization of all user inputs using serializers and validators.  
+**Why It Matters**: Prevents common vulnerabilities such as SQL injection, cross-site scripting (XSS), and data corruption.  
+**Crucial For**: Ensuring data integrity and application stability.
+
+---
+
+### 📝 Audit Logging
+
+**Implementation**: Logging of critical actions (e.g., login attempts, payment transactions, data changes) for monitoring and forensic analysis.  
+**Why It Matters**: Enables detection of suspicious activities and supports incident response.  
+**Crucial For**: Accountability and compliance.
+
+---
+
+### 💳 Payment Security
+
+**Implementation**: Integration with PCI DSS-compliant payment gateways; sensitive payment data is never stored on the server.  
+**Why It Matters**: Ensures that all payment transactions are secure and compliant with industry standards.  
+**Crucial For**: Protecting users’ financial information and building trust.
