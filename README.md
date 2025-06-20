@@ -321,3 +321,33 @@ Security is a critical component of the Airbnb Clone Backend, ensuring the integ
 **Implementation**: Integration with PCI DSS-compliant payment gateways; sensitive payment data is never stored on the server.  
 **Why It Matters**: Ensures that all payment transactions are secure and compliant with industry standards.  
 **Crucial For**: Protecting users’ financial information and building trust.
+
+
+## 🔄 CI/CD Pipeline
+
+### What is CI/CD?
+
+**CI/CD** stands for **Continuous Integration** and **Continuous Deployment/Delivery**. It is a modern development practice that automates the process of building, testing, and deploying code. By integrating code changes frequently and delivering them automatically, CI/CD pipelines help teams release updates quickly and reliably.
+
+---
+
+### Why It’s Important
+
+- 🚀 **Accelerated Releases**: Streamlines the delivery process, allowing new features and fixes to reach users faster.
+- 🧪 **Automated Quality Assurance**: Runs tests and checks on every code change, reducing manual errors and improving code quality.
+- 🔄 **Reliable Deployments**: Ensures that deployments are repeatable and consistent across all environments.
+- 🛡️ **Built-in Security**: Integrates security scans and compliance checks into the pipeline, catching vulnerabilities early.
+- 📉 **Reduced Manual Work**: Minimizes manual intervention, freeing up developers to focus on building features.
+- 📊 **Early Issue Detection**: Identifies bugs and integration issues early in the development cycle.
+
+---
+
+### Common Tools Used
+
+- **GitHub Actions**: For automating workflows such as testing, building, and deploying code.
+- **Docker**: For packaging applications and their dependencies into portable containers.
+- **Docker Compose**: For orchestrating multi-container setups during integration and testing.
+- **Jenkins, GitLab CI, or CircleCI**: Alternative CI/CD platforms for workflow automation.
+- **Code Quality & Security Tools**: Such as SonarQube, Snyk, or Bandit for static analysis and vulnerability scanning.
+
+A robust CI/CD pipeline is essential for maintaining high code quality, accelerating development, and ensuring secure, reliable deployments in the Airbnb Clone project.
