@@ -19,6 +19,8 @@ This is a backend service that powers an Airbnb Clone Platform, providing a scal
 - Docker
 - CI/CD Pipelines
 
+
+
 ## 👥 Team Roles
 ### Each role plays a crucial part in delivering a secure, scalable, and user-friendly Airbnb Clone platform. Below is a breakdown of the key team roles and their core responsibilities within the project:
 
@@ -127,6 +129,8 @@ Tool for testing, documenting, and monitoring APIs in development.
 Automated workflows that streamline the process of building, testing, and deploying code with speed and reliability. 
 **Purpose**: Ensures code changes are validated and deployed efficiently and reliably.
 
+
+
 ##  🗂️ Database Design
 The database schema is thoughtfully designed to handle the main features of the Airbnb Clone application — such as user accounts, property listings, bookings, payments, and reviews. It outlines the core entities, their key attributes, and the relationships that connect them.
 ### 👤 Users
@@ -227,6 +231,8 @@ The database schema is thoughtfully designed to handle the main features of the 
 - `Properties` ──▶ `Reviews`: A property can have many reviews.
 - `Bookings` ──▶ `Payments`: Each booking can have one payment.
 
+
+
 ## ✨ Feature Breakdown
 
 This section outlines the core features implemented in the Airbnb Clone Backend and how each contributes to delivering a functional and user-centric platform.
@@ -260,6 +266,8 @@ The RESTful APIs are described using the OpenAPI standard and made accessible th
 ### 🚀 Performance Optimization
 
 Caching with Redis and strategic database indexing are used to enhance API response times and minimize server load. Background processing with Celery ensures that intensive tasks are handled asynchronously, keeping user interactions fast
+
+
 
 
 ### 🚀 API Security
@@ -321,6 +329,8 @@ Security is a critical component of the Airbnb Clone Backend, ensuring the integ
 **Implementation**: Integration with PCI DSS-compliant payment gateways; sensitive payment data is never stored on the server.  
 **Why It Matters**: Ensures that all payment transactions are secure and compliant with industry standards.  
 **Crucial For**: Protecting users’ financial information and building trust.
+
+
 
 
 ## 🔄 CI/CD Pipeline
