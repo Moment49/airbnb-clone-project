@@ -219,7 +219,7 @@ The database schema is thoughtfully designed to handle the main features of the 
 - A **review** is for one **property**
 
 
-**Legend:**
+**### 🔗 Entity Relationships Overview:**
 - `Users` ──▶ `Properties`: A user (host) owns many properties.
 - `Users` ──▶ `Bookings`: A user (guest) can make many bookings.
 - `Users` ──▶ `Reviews`: A user can leave many reviews.
