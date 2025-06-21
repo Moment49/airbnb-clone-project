@@ -19,6 +19,8 @@ This is a backend service that powers an Airbnb Clone Platform, providing a scal
 - Docker
 - CI/CD Pipelines
 
+
+
 ## 👥 Team Roles
 ### Each role plays a crucial part in delivering a secure, scalable, and user-friendly Airbnb Clone platform. Below is a breakdown of the key team roles and their core responsibilities within the project:
 
@@ -70,22 +72,31 @@ This is a backend service that powers an Airbnb Clone Platform, providing a scal
 
 ## ⚙️ Technology Stack
 
-This project leverages a modern backend technology stack to ensure performance, scalability, and ease of development. Below is a breakdown of the core technologies used and their roles in the project.
+This project leverages a modern backend technology stack to ensure performance, scalability, and ease of development. Below is a breakdown of the core 
+technologies used and their roles in the project.
+
+---
 
 ### 🐍 Django
 
 A high-level web framework built with Python, designed to simplify the development of secure, scalable, and maintainable web applications. 
 **Purpose**: Manages core backend functionality, including URL routing, database interactions, business logic, and built-in admin features.
 
+---
+
 ### 🧰 Django REST Framework (DRF)
 
 A robust and flexible library built on Django that simplifies the building of RESTful APIs.
 **Purpose**: Powers the RESTful API endpoints that handle core functionalities such as user accounts, property listings, bookings, payments, and reviews.
 
+---
+
 ### 🐘 PostgreSQL
 
 A reliable and feature-rich open-source relational database system designed for scalability and data integrity.
 **Purpose**: Manages structured data including user accounts, property listings, bookings, and payment information.
+
+---
 
 ### 🔍 GraphQL
 
@@ -97,38 +108,54 @@ An API query language that enables clients to retrieve precisely the data they r
 A distributed task queue that handles asynchronous and scheduled tasks in the background.
 **Purpose**: Handles background tasks like sending email notifications and processing payments.
 
+---
+
 ### ⚡ Redis
 
 An in-memory data structure store used for caching and message brokering, enabling fast data access and efficient communication between services.
 **Purpose**: Stores session data, accelerates database performance through caching, and serves as a message broker for background task processing with Celery.
 
+---
+
 ### 🐳 Docker
 A containerization platform that enables developers to package applications and their dependencies into isolated containers, ensuring consistent environments across development, testing, and production.  
 **Purpose**: Provides consistent development and deployment environments for the backend stack.
+
+---
 
 ### 🔁 Docker Compose
 
 Tool for defining and running multi-container Docker applications using a simple YAML configuration.
 **Purpose**: Orchestrates multiple services like Django, PostgreSQL, MySQL, and Redis with a single command.
 
+---
+
 ### 🔬 Pytest
 
 A lightweight and powerful testing framework for writing simple and scalable tests in Python applications. 
 **Purpose**: Enables thorough unit and integration testing to ensure system reliability.
+
+---
 
 ### 📬 Postman
 
 Tool for testing, documenting, and monitoring APIs in development.
 **Purpose**: To test and validate RESTful API endpoints throughout development.
 
+---
 
 ### 🔧 CI/CD Pipelines
 
 Automated workflows that streamline the process of building, testing, and deploying code with speed and reliability. 
 **Purpose**: Ensures code changes are validated and deployed efficiently and reliably.
 
+
+
 ##  🗂️ Database Design
 The database schema is thoughtfully designed to handle the main features of the Airbnb Clone application — such as user accounts, property listings, bookings, payments, and reviews. It outlines the core entities, their key attributes, and the relationships that connect them.
+
+---
+
 ### 👤 Users
 ### Represents both regular user and hosts
 
@@ -144,6 +171,8 @@ The database schema is thoughtfully designed to handle the main features of the 
 - A **user** can create multiple **properties**.
 - A **user** can place multiple **bookings**.
 - A **user** can leave multiple **reviews**.
+
+---
 
 ### 👤 Properties
 ### Represents the property listings provided by the property_vendors
@@ -162,6 +191,8 @@ The database schema is thoughtfully designed to handle the main features of the 
 - A **property** is owned by one **user** (host or vendor).
 - A **property** can have multiple **bookings**.
 - A **property** can have multiple **reviews**.
+
+---
 
 ### 📅 Bookings
 ### Represents reservations made by users for properties
@@ -182,6 +213,8 @@ The database schema is thoughtfully designed to handle the main features of the 
 - A **booking** is for one **property**
 - A **booking** can have one **payment** record
 
+---
+
 ### 💳 Payments
 ### Represents payment transactions for bookings
 
@@ -197,12 +230,17 @@ The database schema is thoughtfully designed to handle the main features of the 
 - `created_at` - Timestamp when the payment record was created
 - `updated_at` - Timestamp when the payment record was last updated
 
+
 **Relationships**:
 - A **payment** is linked to one **booking**
 - A **payment** is made
 
+---
+
 ### 📝 Reviews
 ### Represents user feedback and ratings for properties
+
+---
 
 #### Key Fields
 - `id` - Unique identifier for each review
@@ -214,12 +252,14 @@ The database schema is thoughtfully designed to handle the main features of the 
 - `created_at` - Timestamp when the review was created
 - `updated_at` - Timestamp when the review was last updated
 
+
 **Relationships**:
 - A **review** belongs to one **user**
 - A **review** is for one **property**
 
+---
 
-**### 🔗 Entity Relationships Overview:**
+**🔗 Entity Relationships Overview:**
 - `Users` ──▶ `Properties`: A user (host) owns many properties.
 - `Users` ──▶ `Bookings`: A user (guest) can make many bookings.
 - `Users` ──▶ `Reviews`: A user can leave many reviews.
@@ -227,29 +267,43 @@ The database schema is thoughtfully designed to handle the main features of the 
 - `Properties` ──▶ `Reviews`: A property can have many reviews.
 - `Bookings` ──▶ `Payments`: Each booking can have one payment.
 
+
+
 ## ✨ Feature Breakdown
 
 This section outlines the core features implemented in the Airbnb Clone Backend and how each contributes to delivering a functional and user-centric platform.
+
+---
 
 ### 👤 User Management
 
 Enables users to register, log in, and manage their profile information securely. Authentication and authorization are implemented to protect sensitive data and restrict access to certain features based on user roles (e.g., host vs. guest).
 
+---
+
 ### 🏠 Property Management
 
 Allows hosts to create, update, and manage property listings, including details such as property name, description, location, and size. This feature ensures that properties are accurately represented and easily discoverable by potential guests.
+
+---
 
 ### 📅 Booking System
 
 Facilitates the reservation process by allowing users to book available properties for specific dates. It manages booking statuses, prevents double-booking, and provides users and hosts with booking history and details.
 
+---
+
 ### 💳 Payment Processing
 
 Handles secure payment transactions for bookings, supporting various payment methods and tracking payment statuses. This feature ensures that all financial transactions are recorded, processed, and linked to the appropriate bookings and users.
 
+---
+
 ### 📝 Review System
 
 Enables users to leave ratings and feedback for properties they have booked. This feature helps maintain quality and trust within the platform by allowing guests to share their experiences and hosts 
+
+---
 
 ### 📦 API Documentation
 
@@ -260,5 +314,3 @@ The RESTful APIs are described using the OpenAPI standard and made accessible th
 ### 🚀 Performance Optimization
 
 Caching with Redis and strategic database indexing are used to enhance API response times and minimize server load. Background processing with Celery ensures that intensive tasks are handled asynchronously, keeping user interactions fast
-
-API Security
