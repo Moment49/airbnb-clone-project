@@ -260,3 +260,5 @@ The RESTful APIs are described using the OpenAPI standard and made accessible th
 ### 🚀 Performance Optimization
 
 Caching with Redis and strategic database indexing are used to enhance API response times and minimize server load. Background processing with Celery ensures that intensive tasks are handled asynchronously, keeping user interactions fast
+
+API Security
