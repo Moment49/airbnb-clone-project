@@ -70,6 +70,7 @@ This is a backend service that powers an Airbnb Clone Platform, providing a scal
 -  Manages and motivates the software development team, fostering collaboration, resolving conflicts, and maintaining productivity.
 -  Maintains project documentation, including schedules, status reports, and post-project reviews.
 
+
 ## ⚙️ Technology Stack
 
 This project leverages a modern backend technology stack to ensure performance, scalability, and ease of development. Below is a breakdown of the core 
